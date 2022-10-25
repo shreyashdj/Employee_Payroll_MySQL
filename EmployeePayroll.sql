@@ -12,3 +12,5 @@ insert into employee_payroll (name, salary, start_date) values
 ("rohit", 65200, "2000-04-07"),
 ("suyog", 25500, "2020-11-08"),
 ("hitesh", 46100, "2015-01-22");
+-- UC-4 : retrieve all data from table
+select * from employee_payroll;
