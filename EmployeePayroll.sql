@@ -26,3 +26,15 @@ select id,name,salary from employee_payroll where start_date between cast("2014-
 alter table employee_payroll add gender char(1);
 update employee_payroll set gender = "M" where name = "shreyash" or name = "rohit" or name = "hitesh";
 update employee_payroll set gender = "F" where name = "sayali" or name = "rutuja" or name = "ankita";
+
+-- UC-7 : find salary sum, average, min, max, count by gender
+select gender, sum(salary) from Employee_Payroll Where gender = 'M' group by gender;
+select gender, sum(salary) from Employee_Payroll Where gender = 'F' group by gender;
+select gender, avg(salary) from Employee_Payroll Where gender = 'M' group by gender;
+select gender, avg(salary) from Employee_Payroll Where gender = 'F' group by gender;
+select gender, min(salary) from Employee_Payroll Where gender = 'M' group by gender;
+select gender, min(salary) from Employee_Payroll Where gender = 'F' group by gender;
+select gender, max(salary) from Employee_Payroll Where gender = 'M' group by gender;
+select gender, max(salary) from Employee_Payroll Where gender = 'F' group by gender;
+select gender, count(name) from Employee_Payroll Where gender = 'M' group by gender;
+select gender, count(name) from Employee_Payroll Where gender = 'F' group by gender;
