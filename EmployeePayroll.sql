@@ -48,3 +48,10 @@ alter table employee_payroll add department varchar(50) not null after name;
 alter table employee_payroll add address varchar(50) after department;
 alter table employee_payroll add phone_number varchar(50) after address;
 alter table employee_payroll alter address set default "default";
+
+-- UC-9 : add new columns basic_pay, deductions, taxable_pay, income_tax, net_pay
+alter table employee_payroll add basic_pay float;
+alter table employee_payroll add deductions float;
+alter table employee_payroll add taxable_pay float;
+alter table employee_payroll add income_tax float;
+alter table employee_payroll rename column salary to net_pay;
