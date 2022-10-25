@@ -21,3 +21,8 @@ select * from employee_payroll;
 -- UC-5 : retrieve salary from table for specific name and date wise
 select salary from employee_payroll where name = "rohit";
 select id,name,salary from employee_payroll where start_date between cast("2014-09-16" as date) and date(now());
+
+-- UC-6 : add new column gender and set gender for all eployees
+alter table employee_payroll add gender char(1);
+update employee_payroll set gender = "M" where name = "shreyash" or name = "rohit" or name = "hitesh";
+update employee_payroll set gender = "F" where name = "sayali" or name = "rutuja" or name = "ankita";
