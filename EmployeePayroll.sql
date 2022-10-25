@@ -55,3 +55,9 @@ alter table employee_payroll add deductions float;
 alter table employee_payroll add taxable_pay float;
 alter table employee_payroll add income_tax float;
 alter table employee_payroll rename column salary to net_pay;
+
+-- UC-10 : add employee "Terissa" to Sales and Marketing department
+insert into employee_payroll
+(name, phone_number, department, basic_pay, deductions, taxable_pay, income_tax, net_pay, start_date, gender) values
+('Terissa', 7846821730, 'Sales', 45000, 2000, 1500, 5000, 50000, '2022-05-30','F'),
+('Terissa', 7846821730, 'Marketing', 45000, 2000, 1500, 5000, 50000, '2022-05-30','F');
